@@ -732,7 +732,7 @@ class MainComp extends React.Component {
         <div style={{display:"grid", gridAutoFlow:'column', width: "100%", height: "100%",  gridTemplateColumns: "1fr 2fr"}}>
           <div style={{display:"block"}}>
             <img className='poke-image' src={data[loadedID].img} style={{imageRendering: "pixelated", width: "100%"}}/>
-            <div className='text-reveal'><Text style={{fontWeight: "bold", fontSize: "1em", left:"0%", justifySelf: "center"}}>{splitTitleCase(data[loadedID].ability)}</Text></div>
+            <div className='text-reveal'><Text style={{fontWeight: "bold", fontSize: "1em", left:"0%", justifySelf: "center"}}>{subTitleCase(splitTitleCase(data[loadedID].ability))}</Text></div>
           </div>
           <div style={{display: "grid", alignContent: "center", justifyContent:"center", textAlign: "center", width: "100%", gridAutoFlow: "row", gridTemplateColumns: "1fr 1fr", columnGap: "9.5%", rowGap: "0.2%"}}>
             {data[loadedID].moves.map(movedata => 
